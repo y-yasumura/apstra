@@ -86,6 +86,16 @@ resource "apstra_datacenter_device_allocation" "interface_map_assignment" {
   deploy_mode              = "deploy"
 }
 
+## Create Routing Zone
+resource "apstra_datacenter_routing_zone" "vrf1" {
+  name              = "vrf1"
+  blueprint_id      = apstra_datacenter_blueprint.instantiation.id
+#  vlan_id           = 5                                     # optional
+#  vni               = 5000                                  # optional
+#  dhcp_servers      = ["192.168.100.10", "192.168.200.10"]  # optional
+#  routing_policy_id = "<routing-policy-node-id-goes-here>" # optional
+}
+
 ## Commit
 resource "apstra_blueprint_deployment" "deploy" {
   blueprint_id = apstra_datacenter_blueprint.instantiation.id
