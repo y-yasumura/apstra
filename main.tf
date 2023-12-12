@@ -10,6 +10,7 @@ terraform {
   }
 }
 
+
 ## Create Blueprint
 resource "apstra_datacenter_blueprint" "instantiation" {
   name        = "dc1"
