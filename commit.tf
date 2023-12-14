@@ -10,11 +10,11 @@ resource "apstra_blueprint_deployment" "deploy" {
     apstra_datacenter_resource_pool_allocation.leaf-lo-ip,
 
     # for vrf1
-#    apstra_datacenter_routing_zone.vrf1,
-#    #apstra_datacenter_resource_pool_allocation.vrf1-vni,
-#    apstra_datacenter_virtual_network.vn1,
-#    apstra_datacenter_resource_pool_allocation.vn1-vni,
-#    apstra_datacenter_resource_pool_allocation.vrf1-lo
+    apstra_datacenter_routing_zone.vrf1,
+    #apstra_datacenter_resource_pool_allocation.vrf1-vni,
+    apstra_datacenter_virtual_network.vn1,
+    apstra_datacenter_resource_pool_allocation.vn1-vni,
+    apstra_datacenter_resource_pool_allocation.vrf1-lo
   ]
   comment      = "Deployment by Terraform {{.TerraformVersion}}, Apstra provider {{.ProviderVersion}}, User $USER."
 }
